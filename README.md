@@ -45,8 +45,9 @@ spring-boot/
 │ │ │ ├─ SoftwareEngineer.java # Entity/model
 │ │ │ ├─ SoftwareEngineerController.java # REST controller
 │ │ │ ├─ SoftwareEngineerRepository.java # JPA repository
-│ │ │ └─ SoftwareEngineerService.java # Service layer
-│ │ │
+│ │ │ ├─ SoftwareEngineerService.java # Service layer
+│ │ │ ├─ GlobalExceptionHandler.java
+│ │ │ └─ SoftwareEngineerNotFoundException.java
 │ │ └─ resources/
 │ │ ├─ static/ # Static assets (empty)
 │ │ ├─ templates/ # Template files (empty)
@@ -122,9 +123,9 @@ mvn spring-boot:run
 
   POST     /api/v1/software-engineers        Add new engineer
 
-  PUT      /api/v1/software-engineers/{id}   Update engineer
+  PUT      /api/v1/software-engineers/{id}   Update engineer by ID
 
-  DELETE   /api/v1/software-engineers/{id}   Delete engineer
+  DELETE   /api/v1/software-engineers/{id}   Delete engineer by ID
   ---------------------------------------------------------------------------
 ``` 
 ------------------------------------------------------------------------
