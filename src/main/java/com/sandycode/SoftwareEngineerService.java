@@ -25,8 +25,21 @@ public class SoftwareEngineerService {
     public SoftwareEngineer getSoftwareEngineerById(Integer id)
     {
         return softwareEngineerRepository.findById(id)
-                .orElseThrow(() -> new IllegalStateException(id + "not found"));
+                .orElseThrow(() -> new SoftwareEngineerNotFoundException(id));
     }
+    public void updateSoftwareEngineer(Integer id, SoftwareEngineer updatedData)
+    {
+        SoftwareEngineer existing = getSoftwareEngineerById(id);
+        existing.setName(updatedData.getName());
+        existing.setTechStack(updatedData.getTechStack());
+        softwareEngineerRepository.save(existing);
+    }
+    public void deleteSoftwareEngineer(Integer id)
+    {
+        softwareEngineerRepository.deleteById(id);
+    }
+
+
 }
 
 
