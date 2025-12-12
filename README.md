@@ -1,4 +1,4 @@
-<img width="1259" height="870" alt="image" src="https://github.com/user-attachments/assets/39757b8b-ef17-4276-b9c1-8431cc0571cd" /><img width="1259" height="870" alt="image" src="https://github.com/user-attachments/assets/04bac439-202c-4e6e-a4a9-ca0198d0885d" /># Spring Boot PostgreSQL REST API
+# Spring Boot PostgreSQL REST API
 
 A hands-on Spring Boot project that demonstrates building a real-world
 backend application with Java, Spring Boot, Spring Data JPA, PostgreSQL,
@@ -20,18 +20,18 @@ course.
 
 ##  Tech Stack
 
--   Java 21\
--   Spring Boot\
--   Spring MVC\
--   Spring Data JPA\
--   PostgreSQL\
--   Docker & Docker Compose\
--   Maven\
+-   Java 21
+-   Spring Boot
+-   Spring MVC
+-   Spring Data JPA
+-   PostgreSQL
+-   Docker & Docker Compose
+-   Maven
 -   IntelliJ IDEA Ultimate Edition
 
 ------------------------------------------------------------------------
-```  
 ##  Project Structure
+``` 
 spring-boot/
 │
 ├─ .idea/ # IntelliJ project settings (ignored in Git)
@@ -76,10 +76,10 @@ spring-boot/
 
 Make sure you have the following installed:
 
--   JDK 21\
--   Maven\
--   Docker & Docker Compose\
--   IntelliJ IDEA (recommended)
+-   JDK 21
+-   Maven
+-   Docker & Docker Compose
+-   IntelliJ IDEA (I recommend u)
 
 ------------------------------------------------------------------------
 
@@ -105,10 +105,10 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-The application will start on:
-
+### *The application will start on:*
+``` 
     http://localhost:8080
-
+``` 
 ------------------------------------------------------------------------
 
 ## 🧩 API Endpoints
