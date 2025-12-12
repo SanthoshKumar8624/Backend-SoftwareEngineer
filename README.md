@@ -1,4 +1,4 @@
-# Spring Boot PostgreSQL REST API
+<img width="1259" height="870" alt="image" src="https://github.com/user-attachments/assets/39757b8b-ef17-4276-b9c1-8431cc0571cd" /><img width="1259" height="870" alt="image" src="https://github.com/user-attachments/assets/04bac439-202c-4e6e-a4a9-ca0198d0885d" /># Spring Boot PostgreSQL REST API
 
 A hands-on Spring Boot project that demonstrates building a real-world
 backend application with Java, Spring Boot, Spring Data JPA, PostgreSQL,
@@ -30,7 +30,7 @@ course.
 -   IntelliJ IDEA Ultimate Edition
 
 ------------------------------------------------------------------------
-
+```  
 ##  Project Structure
 spring-boot/
 │
@@ -67,6 +67,7 @@ spring-boot/
 ├─ mvnw.cmd # Maven wrapper (Windows)
 ├─ pom.xml # Maven dependencies and build config
 └─ request.http # IntelliJ REST client API tests
+``` 
 ------------------------------------------------------------------------
 
 ## ⚽ Getting Started
@@ -111,7 +112,7 @@ The application will start on:
 ------------------------------------------------------------------------
 
 ## 🧩 API Endpoints
-
+``` 
   ---------------------------------------------------------------------------
   Method   Endpoint                          Description
   -------- --------------------------------- --------------------------------
@@ -125,7 +126,7 @@ The application will start on:
 
   DELETE   /api/v1/software-engineers/{id}   Delete engineer
   ---------------------------------------------------------------------------
-
+``` 
 ------------------------------------------------------------------------
 
 ## 📝 Notes
