@@ -127,7 +127,52 @@ mvn spring-boot:run
 
   DELETE   /api/v1/software-engineers/{id}   Delete engineer by ID
   ---------------------------------------------------------------------------
-``` 
+```
+## Request Flow Diagram
+```
+CLIENT (Browser / Postman)
+        |
+        |  HTTP Request
+        |  (GET / POST / PUT / DELETE)
+        v
+SoftwareEngineerController
+        |
+        |  calls service method
+        v
+SoftwareEngineerService
+        |
+        |  calls repository method
+        v
+SoftwareEngineerRepository ----(while ID-not-found)- - > Optional.empty()
+        |                                                       |   
+    (only if ID is found)                                       |
+                                                                v 
+        |  JPA API                               SoftwareEngineerNotFoundException
+        v                                                       |                                    
+Hibernate (JPA Implementation)                                  v   
+        |                                              GlobalExceptionHandler
+        |  SQL Query                                            |
+        v                                                       v
+PostgreSQL Database                                   404 NOT FOUND + message
+        |
+        |  ResultSet (rows)
+        v
+    Hibernate
+        |
+        |  Maps rows -> Java Objects
+        v
+SoftwareEngineerRepository
+        |
+        v
+SoftwareEngineerService
+        |
+        v
+SoftwareEngineerController
+        |
+        |  JSON Response
+        v
+      CLIENT
+```
 ------------------------------------------------------------------------
 
 ## 📝 Notes
